@@ -14,12 +14,15 @@ import java.util.Map;
 @Service
 public class PaymentService {
 
-    @Autowired
-    private WorkerFeignClient feignClient;
+    private final WorkerFeignClient feignClient;
+
+    public PaymentService(WorkerFeignClient feignClient) {
+        this.feignClient = feignClient;
+    }
 
     public Payment getPayment(Long workerId, int days) {
 
-        Worker worker = feignClient.findById(workerId).getBody();
+        Worker worker = feignClient.findById(workerId);
         return new Payment(worker.getName(), worker.getDailyIncome(), days);
     }
 }

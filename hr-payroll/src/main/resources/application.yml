@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: default
+
+server:
+  port: 8101
+
+  cloud:
+    loadbalancer:
+      instances:
+        hr-worker:
+          - uri: http://localhost:8001
+
+logging:
+  level:
+    org.springframework.cloud.loadbalancer: DEBUG
