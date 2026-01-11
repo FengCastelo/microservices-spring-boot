@@ -1,21 +1,19 @@
 spring:
+  application:
+    name: hr-payroll
+
   profiles:
     active: default
 
 server:
   port: 8101
 
-  cloud:
-    loadbalancer:
-      instances:
-        hr-worker:
-          - uri: http://localhost:8001
-
-            eureka:
-              client:
-                service-url:
-                  defaultZone=http://localhost:8761/eureka:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
 logging:
   level:
+    org.springframework.cloud.netflix.eureka: INFO
     org.springframework.cloud.loadbalancer: DEBUG
