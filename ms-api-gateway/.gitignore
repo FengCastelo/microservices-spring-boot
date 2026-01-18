@@ -31,39 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### Properties ###
-*.properties
-
-# Compiled output
-*.class
-*.jar
-*.war
-*.ear
-target/
-
-# IDE-specific files
-.idea/
-*.yml
-*.ipr
-*.iws
-.project
-.classpath
-.settings/
-nbproject/
-
-# Dependency management artifacts
-pom.xml.tag
-pom.xml.bak
-pom.xml.releaseBackup
-dependency-reduced-pom.xml
-
-# Log files and temporary files
-*.log
-*.tmp
-*~
-*.swp
-
-# Operating system specific files
-.DS_Store
-Thumbs.db
