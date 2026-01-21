@@ -16,6 +16,7 @@
         <module>hr-payroll</module>
         <module>hr-eureka-server</module>
         <module>ms-api-gateway</module>
+        <module>ms-oauth</module>
         <module>ms-config-server</module>
         <module>hr-user</module>
     </modules>
